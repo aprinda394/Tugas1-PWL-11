@@ -2,19 +2,23 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\AdminSeeder;
+use Database\Seeders\BookshelfSeeder;
+use Database\Seeders\BookSeeder;
+use Database\Seeders\LoanSeeder;
+use Database\Seeders\CategorySeeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
         $this->call([
-            AdminSeeder::class,
-            CategorySeeder::class,
-        ]);
+    AdminSeeder::class,
+    BookshelfSeeder::class,
+    CategorySeeder::class,
+    BookSeeder::class,
+    LoanSeeder::class,
+]);
     }
 }
